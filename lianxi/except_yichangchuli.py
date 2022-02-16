@@ -15,7 +15,7 @@ def func():
         print(num)
     except (ValueError,AssertionError) as e:
         print(e)
-        print('不是数字')
+        print('不是数字哦')
     else:
         print('没有发生异常')
 
