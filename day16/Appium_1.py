@@ -35,3 +35,4 @@ driver =webdriver.Remote("http://127.0.0.1:4723/wd/hub",desired_caps)
 # print('app已关闭，准备开启')
 # driver.launch_app()
 # driver.background_app(2)  #后台启动
+driver.press_keycode(66) #执行按键码
