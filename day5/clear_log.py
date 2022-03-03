@@ -18,3 +18,5 @@ if len(args)>1:
 else:
     print('运行这个Python文件需要传入一个路径！\n'
           'eg: python clear_log.py /usr/tomcat/logs')
+
+
