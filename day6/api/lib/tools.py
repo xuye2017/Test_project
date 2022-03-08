@@ -1,5 +1,5 @@
 import pymysql,redis
-from conf import setting
+from conf_api import setting
 def op_mysql(sql):
 	conn = pymysql.connect(host=setting.MYSQL_HOST,user=setting.USER,
 						   password=setting.PASSWORD,
