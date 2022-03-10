@@ -49,7 +49,7 @@ if __name__=='__main__':
 	sql = 'select * from bt_stu limit 5;'
 	sql2 = 'update bt_stu set class="天蝎座3" where id=503;'
 	res = op_mysql(
-		host='211.149.218.16',
-		user='jxz',password='123456',#port这里一定要写int类型
-		port=3306,db='jxz',charset='utf8',sql=sql2)
+		host='127.0.0.1',
+		user='root',password='112233',#port这里一定要写int类型
+		port=3306,db='infotest',charset='utf8',sql=sql2)
 	print(res)

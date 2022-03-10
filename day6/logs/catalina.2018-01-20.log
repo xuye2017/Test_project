@@ -1,0 +1,22 @@
+Jun 17, 2017 4:05:50 AM hudson.model.AsyncPeriodicWork$1 run
+INFO: Started Out of order build detection
+Jun 17, 2017 4:06:40 AM jenkins.diagnostics.ooom.Problem$Inspector scan
+WARNING: Failed to inspect /home/rrd_boy/.jenkins/jobs/BesTest/builds/1: /home/rrd_boy/.jenkins/jobs/BesTest/builds/1/build.xml doesn't exist
+Jun 17, 2017 4:06:40 AM jenkins.diagnostics.ooom.Problem$Inspector scan
+WARNING: Failed to inspect /home/rrd_boy/.jenkins/jobs/BesTest/builds/2017-01-15_16-09-33: /home/rrd_boy/.jenkins/jobs/BesTest/builds/2017-01-15_16-09-33/build.xml doesn't exist
+Jun 17, 2017 4:07:10 AM hudson.model.AsyncPeriodicWork$1 run
+INFO: Finished Out of order build detection. 80049 ms
+Jun 17, 2017 8:09:43 AM hudson.model.AsyncPeriodicWork$1 run
+INFO: Started Download metadata
+Jun 17, 2017 8:09:43 AM hudson.model.AsyncPeriodicWork$1 run
+INFO: Finished Download metadata. 1 ms
+Jun 17, 2017 2:26:57 PM hudson.model.AsyncPeriodicWork$1 run
+INFO: Started Fingerprint cleanup
+Jun 17, 2017 2:26:57 PM hudson.model.FingerprintCleanupThread execute
+INFO: Cleaned up 0 records
+Jun 17, 2017 2:26:57 PM hudson.model.AsyncPeriodicWork$1 run
+INFO: Finished Fingerprint cleanup. 1 ms
+Jun 17, 2017 2:54:36 PM hudson.model.AsyncPeriodicWork$1 run
+INFO: Started Workspace clean-up
+Jun 17, 2017 2:54:36 PM hudson.model.AsyncPeriodicWork$1 run
+INFO: Finished Workspace clean-up. 1 ms
