@@ -1,5 +1,6 @@
 import pymysql,redis
 from conf_api import setting
+import  hashlib
 def op_mysql(sql):
 	conn = pymysql.connect(host=setting.MYSQL_HOST, user=setting.USER,
                            password=setting.PASSWORD,
@@ -17,11 +18,15 @@ def op_mysql(sql):
 	conn.close()
 	return res
 
-def op_redis(host,password,k,v=None,port=6379,db=0):
-	r = redis.Redis(host=host,password=password,port=port,db=db)
-	if v:
-		r.set(k,v)
+def op_redis(k,v=None,expired=0,db=0):
+	r = redis.Redis(host=setting.REDIS_HOST,password=setting.PASSWORD,port=setting.PORT,db=db)
+	if expired>0:#传了失效时间
+		r.set(k,v,expired)
 		res = 'ok'
+	elif v:
+		r.set(k,v)
+		res='ok'
+
 	else:
 		res = r.get(k)
 		if res: #这里是判断有没有get到数据
@@ -30,6 +35,10 @@ def op_redis(host,password,k,v=None,port=6379,db=0):
 			res = None
 	return res
 
+def md5_passwd(st:str):       #限制入参的类型为string，设置必须传入字符串，不传就会报错
+	bytes_st = st.encode()    #将字符串转化成byte类型
+	m= hashlib.md5(bytes_st)  #构建MD5对象
+	return m.hexdigest()      #返回加密结果
 # print(__name__)
 # print('哈哈哈哈，我在这里头')
 if __name__=='__main__':
