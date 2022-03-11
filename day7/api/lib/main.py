@@ -1,9 +1,11 @@
 import os
+
 import flask, json
 import time
 from lib.tools import op_redis,op_mysql,md5_passwd
 # 接口，后台服务
 server = flask.Flask(__name__)  # 把咱们这个app这个python文件当做一个server
+
 
 @server.route('/get_user', methods=['get', 'post'])
 def get_all_user():
